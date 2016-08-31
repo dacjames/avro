@@ -17,11 +17,7 @@
  */
 package org.apache.avro;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.StringReader;
-import java.io.StringWriter;
+import java.io.*;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Iterator;
@@ -77,7 +73,7 @@ import org.codehaus.jackson.node.DoubleNode;
  * existing property.
  * </ul>
  */
-public abstract class Schema extends JsonProperties {
+public abstract class Schema extends JsonProperties implements Serializable {
   static final JsonFactory FACTORY = new JsonFactory();
   static final ObjectMapper MAPPER = new ObjectMapper(FACTORY);
 
